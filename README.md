@@ -2,8 +2,16 @@ Bootstrap入門
 =============
 
 # 目的 #
+[今日からはじめる！Twitter Bootstrap 3入門 〜Webデザイナーのための簡単サイト構築術〜](http://www.find-job.net/startup/twitter-bootstrap-3)を実習してBootstrapに習熟する。
 
 # 前提 #
+| ソフトウェア   | バージョン   | 備考        |
+|:---------------|:-------------|:------------|
+| OS X           |10.8.5        |       |
+| npm            |1.2.18        |       |
+| bower          |1.2.7         |       |
+| grunt          |0.1.11        |       |
+| bootstrap      |3.0.2         |       |
 
 # 構成 #
 + [セットアップ](#chapter1) 
@@ -74,6 +82,7 @@ Bootstrap入門
 
 ### CSS,Componentsをコピーする ###
 1. navbarの設定
+
 [Default navbar](http://getbootstrap.com/components/#navbar-default)
 
 1. 背景色を変える
@@ -81,6 +90,7 @@ Bootstrap入門
         <nav class="navbar navbar-inverse" role="navigation">
 
 1. Jumbotronの設定
+
 [Jumbotron](http://getbootstrap.com/components/#jumbotron)
 
 1. 真ん中寄せにする
