@@ -1,0 +1,18 @@
+{
+  "name": "css_bootstrap",
+  "version": "0.0.1",
+  "homepage": "https://github.com/k2works/css_bootstrap",
+  "authors": [
+    "k2works <kakimomokuri@gmail.com>"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

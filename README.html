@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+
+</head>
+
+<body>
+
+<h1>Bootstrap入門</h1>
+
+<h1>目的</h1>
+
+<h1>前提</h1>
+
+<h1>構成</h1>
+
+<ul>
+<li><a href="#chapter1">セットアップ</a> </li>
+<li><a href="#chapter2">ページ作成</a> </li>
+</ul>
+
+<h1>詳細</h1>
+
+<h2><a name="chapter1">セットアップ</h2>
+
+<h3>Bowerの設定</h3>
+
+<pre><code>$ brew install node.js
+$ npm install bower -g
+$ /usr/local/share/npm/bin/bower -v
+$ /usr/local/share/npm/bin/bower init
+</code></pre>
+
+<h3>Gruntの設定</h3>
+
+<pre><code>$ npm install -g grunt-cli
+$ /usr/local/share/npm/bin/grunt -v
+</code></pre>
+
+<h3>Bootstrapの設定</h3>
+
+<pre><code>$ cd bower_components/bootstrap/
+$ /usr/local/share/npm/bin/bower install bootstrap
+$ cd bower_components/bootstrap/
+$ /usr/local/share/npm/bin/grunt
+$ tree dist/
+    dist/
+    ├── css
+    │   ├── bootstrap-theme.css
+    │   ├── bootstrap-theme.min.css
+    │   ├── bootstrap.css
+    │   └── bootstrap.min.css
+    ├── fonts
+    │   ├── glyphicons-halflings-regular.eot
+    │   ├── glyphicons-halflings-regular.svg
+    │   ├── glyphicons-halflings-regular.ttf
+    │   └── glyphicons-halflings-regular.woff
+    └── js
+        ├── bootstrap.js
+        └── bootstrap.min.js
+</code></pre>
+
+<h2><a name="chapter2">ページ作成</h2>
+
+<h3>index.htmlを作成する</h3>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;!-- Bootstrap --&gt;
+  &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+
+  &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+  &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+  &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;script&gt;
+      &lt;![endif]--&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+  &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+  &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+  &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+  &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;&gt;
+</code></pre>
+
+<h3>CSS,Componentsをコピーする</h3>
+
+<ol>
+<li><p>navbarの設定
+<a href="http://getbootstrap.com/components/#navbar-default">Default navbar</a></p></li>
+<li><p>背景色を変える</p>
+
+<pre><code>&lt;nav class="navbar navbar-inverse" role="navigation"&gt;
+</code></pre></li>
+<li><p>Jumbotronの設定
+<a href="http://getbootstrap.com/components/#jumbotron">Jumbotron</a></p></li>
+<li><p>真ん中寄せにする</p>
+
+<pre><code>&lt;div class="container"&gt;
+  &lt;div class="jumbotron"&gt;
+  ....
+&lt;/div&gt;
+</code></pre></li>
+</ol>
+
+<h3>カスタマイズする</h3>
+
+<ol>
+<li><p>bootstrap/less/jumbotron.lessファイルを編集する。</p>
+
+<pre><code>background-image: url(http://lorempixel.com/1200/400/nature);
+</code></pre></li>
+<li><p>コンパイルする</p>
+
+<pre><code>$ cd ..
+$ /usr/local/share/npm/bin/grunt dist-css
+$ cd dist
+</code></pre></li>
+<li><p>画面を確認する</p>
+
+<p><img src="img/001.png" alt="001" title="" /></p></li>
+</ol>
+
+<h1>参照</h1>
+
+<p><a href="http://getbootstrap.com/getting-started/">Getting started</a></p>
+
+<p><a href="http://yosuke-furukawa.hatenablog.com/entry/2013/06/01/173308">Bower入門(基礎編)</a></p>
+
+<p><a href="http://bower.io/#defining-a-package">Bower</a></p>
+
+<p><a href="http://kojika17.com/2013/03/grunt.js-memo.html">Web制作で面倒な作業を自動化するビルドツール、Grunt v0.4 入門</a></p>
+
+<p><a href="http://re-dzine.net/2013/08/compile-in-bootstrap3/">Bootstrap3でLESS/JSのコンパイル方法が変更に</a></p>
+
+<p><a href="http://www.find-job.net/startup/twitter-bootstrap-3">今日からはじめる！Twitter Bootstrap 3入門 〜Webデザイナーのための簡単サイト構築術〜</a></p>
+
+<p><a href="http://ozpa-h4.com/2013/01/29/lorempixel-dummy-img/">imgタグを記述するだけでダミーの画像を表示してくれるサービス「lorempixel」が便利</a></p>
+
+<p><a href="http://blog.mach3.jp/2013/03/21/gruntjs.html">コーダーさんの為のGrunt入門（前編）〜導入編</a></p>
+
+<p><a href="http://blog.mach3.jp/2013/03/26/gruntjs-css.html">コーダーさんの為のGrunt入門（後編）〜CSSプリコンパイラ編</a></p>
+
+</body>
+</html>
